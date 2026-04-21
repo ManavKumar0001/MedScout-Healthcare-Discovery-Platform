@@ -1,0 +1,1 @@
+# MedScout-Healthcare-Discovery-Platform
