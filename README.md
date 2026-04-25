@@ -208,12 +208,6 @@ npm run dev
 
 ---
 
-## 📜 License
-
-This project is licensed under the **MIT License** — feel free to use and modify.
-
----
-
 ## ⭐ Support
 
 If you like this project:
