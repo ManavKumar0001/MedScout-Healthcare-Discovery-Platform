@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedScout</title>
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../css/variables.css">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="../../css/shop-inventory.css">
+</head>
+<body>
+  <div class="dashboard-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header" style="display:flex; align-items:center; gap: 10px;"><img src="../../assets/favicon.svg" alt="MedScout" style="height: 24px;"> MedScout</div>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html">Overview</a>
+        <a href="inventory.html" class="active">Inventory</a>
+        <a href="profile.html">Shop Profile</a>
+      </nav>
+      <div class="logout-container">
+        <button id="logout-btn" class="logout-btn">Log out</button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="topbar">
+        <h2>Inventory Management</h2>
+        <div id="user-info" class="user-info"></div>
+      </header>
+
+      <div class="content-area">
+        <div class="actions-header card">
+          <h3>Add New Medicine</h3>
+          <form id="add-med-form" class="inline-form" style="margin-top: 1rem;">
+            <div class="form-group">
+              <input type="text" id="med-name" class="form-control" placeholder="Medicine Name" required>
+            </div>
+            <div class="form-group">
+              <input type="number" id="med-price" class="form-control" placeholder="Price ($)" step="0.01" required>
+            </div>
+            <div class="form-group">
+              <input type="number" id="med-stock" class="form-control" placeholder="Stock" min="0" required>
+            </div>
+            <div class="form-group" style="flex: 2;">
+              <input type="text" id="med-desc" class="form-control" placeholder="Short Description" required>
+            </div>
+            <button type="submit" class="btn btn-primary" style="margin-bottom: 1.5rem;">Add</button>
+          </form>
+          <div id="med-msg"></div>
+        </div>
+
+        <div class="inventory-section card" style="margin-top: 2rem;">
+          <h3>Current Inventory</h3>
+          <div class="table-container" style="margin-top: 1rem;">
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Description</th>
+                  <th>Price ($)</th>
+                  <th>Stock</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="inventory-table">
+                <!-- Data injected via JS -->
+              </tbody>
+            </table>
+            <div id="inventory-loader" style="display: none; padding: 1rem; text-align:center;">Loading...</div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="../../js/shop-inventory.js"></script>
+</body>
+</html>
+

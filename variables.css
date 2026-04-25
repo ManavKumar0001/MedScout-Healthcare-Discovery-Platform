@@ -1,0 +1,21 @@
+/* css/variables.css */
+:root {
+  --primary-color: #2DD4BF;
+  --primary-hover: #14b8a6;
+  --secondary-color: #38bdf8;
+  --bg-main: radial-gradient(circle at top left, #0F172A, #1E1B4B, #0F172A);
+  --text-dark: #F8FAFC;
+  --text-light: #94A3B8;
+  --white: rgba(255, 255, 255, 0.05);
+  --border-color: rgba(255, 255, 255, 0.15);
+  --danger-color: #FACC15;
+  --danger-hover: #eab308;
+
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.15);
+  --glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+
+  --font-family: 'Inter', -apple-system, sans-serif;
+  --transition: all 0.2s ease;
+}

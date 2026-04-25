@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedScout</title>
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../css/variables.css">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="../../css/shop-profile.css">
+</head>
+<body>
+  <div class="dashboard-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header" style="display:flex; align-items:center; gap: 10px;"><img src="../../assets/favicon.svg" alt="MedScout" style="height: 24px;"> MedScout</div>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html">Overview</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="profile.html" class="active">Shop Profile</a>
+      </nav>
+      <div class="logout-container">
+        <button id="logout-btn" class="logout-btn">Log out</button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="topbar">
+        <h2>Shop Profile</h2>
+        <div id="user-info" class="user-info"></div>
+      </header>
+
+      <div class="content-area">
+        <div class="card" style="max-width: 600px;">
+          <h3>Shop Details</h3>
+          <form id="profile-form" style="margin-top: 1.5rem;">
+            <div class="form-group">
+              <label for="name">Owner Name</label>
+              <input type="text" id="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" class="form-control" disabled>
+              <small style="color:var(--text-light); margin-top:0.25rem;">Email cannot be changed.</small>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" class="form-control" required>
+            </div>
+            
+            <div class="form-group" style="margin-top: 1.5rem;">
+              <h4 style="border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1rem;">Business Information</h4>
+              <label for="shopName">Shop Name</label>
+              <input type="text" id="shopName" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="pincode">Pincode</label>
+              <input type="text" id="pincode" class="form-control" required maxlength="10">
+            </div>
+            
+            <div id="profile-msg"></div>
+            <button type="submit" class="btn btn-primary" style="margin-top: 1rem;">Update Profile</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="../../js/shop-profile.js"></script>
+</body>
+</html>
+

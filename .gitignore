@@ -1,0 +1,19 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# Java
+*.class
+*.jar
+!mysql-connector-j-*.jar
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo

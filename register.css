@@ -1,0 +1,26 @@
+/* css/register.css */
+/* Similar to login, so just import auth base if needed, or add specifics */
+@import url('./login.css');
+
+.radio-group {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  color: var(--text-dark);
+}
+
+#shopowner-fields {
+  display: none;
+  background: rgba(45, 212, 191, 0.05);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--glass-border);
+}

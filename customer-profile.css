@@ -1,0 +1,5 @@
+/* css/customer-profile.css */
+/* Styles for profile page - minimal as it leverages components.css */
+small {
+  display: block;
+}

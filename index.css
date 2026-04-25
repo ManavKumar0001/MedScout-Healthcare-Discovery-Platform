@@ -1,0 +1,71 @@
+/* css/index.css */
+.navbar {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--glass-border);
+  color: var(--text-dark);
+  padding: 1rem 0;
+  box-shadow: var(--glass-shadow);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero {
+  background: transparent;
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: var(--text-light);
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 4rem 1.5rem;
+}
+
+.feature-card h3 {
+  color: var(--primary-color);
+}
+
+.footer {
+  background: transparent;
+  border-top: 1px solid var(--glass-border);
+  color: var(--text-light);
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: auto;
+}

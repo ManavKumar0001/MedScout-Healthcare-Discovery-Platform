@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedScout</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-card card" style="max-width: 500px;">
+      <div class="auth-header">
+        <h1>Create Account</h1>
+        <p>Join MedScout today</p>
+      </div>
+      
+      <form id="register-form">
+        <div class="form-group">
+          <label>I am a:</label>
+          <div class="radio-group">
+            <label class="radio-label">
+              <input type="radio" name="role" value="customer" checked> Customer
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="role" value="shopowner"> Shop Owner
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" class="form-control" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" class="form-control" required minlength="6">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" class="form-control" required>
+        </div>
+
+        <div id="shopowner-fields">
+          <div class="form-group">
+            <label for="shopName">Shop Name</label>
+            <input type="text" id="shopName" class="form-control">
+          </div>
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="pincode">Pincode</label>
+            <input type="text" id="pincode" class="form-control" maxlength="10">
+          </div>
+        </div>
+        
+        <div id="register-msg"></div>
+        
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Register</button>
+      </form>
+      
+      <div class="auth-footer">
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="../js/register.js"></script>
+</body>
+</html>
+

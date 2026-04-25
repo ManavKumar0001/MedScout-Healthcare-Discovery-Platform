@@ -1,0 +1,99 @@
+/* css/components.css */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: var(--transition);
+  text-align: center;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: #0F172A;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+.btn-danger {
+  background: var(--danger-color);
+  color: #0F172A;
+}
+
+.btn-danger:hover {
+  background: var(--danger-hover);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.form-control {
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-dark);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.1);
+}
+
+.card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: 16px;
+  padding: 2rem;
+}
+
+.table-container {
+  overflow-x: auto;
+  border-radius: 16px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+th {
+  color: var(--text-light);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}

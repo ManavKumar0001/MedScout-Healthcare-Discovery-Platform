@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedScout</title>
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../css/variables.css">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="../../css/shop-dashboard.css">
+</head>
+<body>
+  <div class="dashboard-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header" style="display:flex; align-items:center; gap: 10px;"><img src="../../assets/favicon.svg" alt="MedScout" style="height: 24px;"> MedScout</div>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="active">Overview</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="profile.html">Shop Profile</a>
+      </nav>
+      <div class="logout-container">
+        <button id="logout-btn" class="logout-btn">Log out</button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="topbar">
+        <h2>Shop Overview</h2>
+        <div id="user-info" class="user-info"></div>
+      </header>
+
+      <div class="content-area">
+        <div class="stats-grid">
+          <div class="stat-card card">
+            <h3 id="stat-total-medicines">0</h3>
+            <p>Total Medicines</p>
+          </div>
+          <div class="stat-card card">
+            <h3 id="stat-low-stock">0</h3>
+            <p>Low Stock Items</p>
+          </div>
+          <div class="stat-card card action-card" onclick="window.location.href='inventory.html'">
+            <h3 style="color:var(--primary-color)">+</h3>
+            <p>Add New Medicine</p>
+          </div>
+        </div>
+
+        <div class="recent-section card" style="margin-top: 2rem;">
+          <h3>Recently Added Inventory</h3>
+          <div class="table-container" style="margin-top: 1rem;">
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Price ($)</th>
+                  <th>Stock</th>
+                </tr>
+              </thead>
+              <tbody id="recent-table">
+                <!-- Data injected via JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="../../js/shop-dashboard.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,84 @@
+/* css/customer-dashboard.css */
+.search-form {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  align-items: flex-start;
+}
+
+.search-form .form-group {
+  margin-bottom: 0px;
+  flex: 1;
+}
+
+.results-section {
+  margin-top: 2rem;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.medicine-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.medicine-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--glass-shadow);
+}
+
+.medicine-card h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.medicine-card .shop-name {
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.medicine-card .med-details {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed rgba(255, 255, 255, 0.15);
+  display: flex;
+  justify-content: space-between;
+}
+
+.medicine-card .price {
+  font-weight: 700;
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+}
+
+.medicine-card .stock {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+}
+
+.medicine-card .stock.low {
+  background: rgba(234, 179, 8, 0.15);
+  color: var(--danger-color);
+}
+
+@media (max-width: 640px) {
+  .search-form {
+    flex-direction: column;
+  }
+  .search-form button {
+    width: 100%;
+  }
+}
